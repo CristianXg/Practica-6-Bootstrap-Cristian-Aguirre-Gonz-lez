@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/bf76d6a5c6.js" crossorigin="anonymous"></script>
+
+    <title>Página de Usuarios</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class=" collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            </ul>
+        </div>
+    </nav><br><br><br><br>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control col-sm-6" placeholder="Nombre de usuario a buscar" aria-label="Username"
+            aria-describedby="basic-addon1">
+        <button type="button" class="btn btn-primary btn-sm">Buscar</button>
+    </div>
+    <div class="media align-self-center mr-3">
+        <div class="media-left ">
+            <img class="rounded-circle" src="https://randomuser.me/api/portraits/women/3.jpg">
+        </div>
+        <div class="media-body">
+            <h6 class="mt-1">Lisseth León Cando</h6>
+            <p> Correo: lisseth.leon@unl.edu.ec</p>
+            <p> Fecha de Nacimiento: 1997/05/20</p>
+            <p> Sexo: Mujer</p>
+        </div>
+        <div class="media-right">
+            <button type="button" class="btn btn-primary "><i class="fas fa-search"></i></button><br><br>
+            <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#registroModal"><i class="fas fa-edit"></i></button><br><br>
+            <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#deletingModal1"><i
+                    class="fas fa-trash-alt"></i></i></button>
+        </div>
+    </div>
+    <div class="media align-self-center mr-3">
+        <div class="media-left ">
+            <img class="rounded-circle" src="https://randomuser.me/api/portraits/men/3.jpg">
+        </div>
+        <div class="media-body">
+            <h6 class="mt-1">Andres Armijos Villavicencio</h6>
+            <p> Correo: andres.villavicencio@unl.edu.ec</p>
+            <p> Fecha de Nacimiento: 1990/07/12</p>
+            <p> Sexo: Hombre</p>
+        </div>
+        <div class="media-right">
+            <button type="button" class="btn btn-primary "><i class="fas fa-search"></i></button><br><br>
+            <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#registroModal"><i class="fas fa-edit"></i></button><br><br>
+            <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#deletingModal2"><i
+                    class="fas fa-trash-alt"></i></button>
+        </div>
+    </div>
+    <div class='modal fade' id='deletingModal1' tabindex='-1' role='dialog' aria-labelledby='deletingModal1'
+        aria-hidden='true'>
+        <div class='modal-dialog' role='document'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <h5 class='modal-title' id='deletingModal1'>Borrar Usuario</h5>
+                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+                        <span aria-hidden='true'>&times;</span>
+                    </button>
+                </div>
+                <div class='modal-body'>
+                    <h6 class="mt-1">Lisseth León Cando</h6>
+                    <p> Correo: lisseth.leon@unl.edu.ec</p>
+                    <p> Fecha de Nacimiento: 1997/05/20</p>
+                    <p> Sexo: Mujer</p>
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-secondary' data-dismiss='modal'>Cerrar</button>
+                    <button type='button' class='btn btn-primary' data-dismiss='modal'>Borrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='modal fade' id='deletingModal2' tabindex='-1' role='dialog' aria-labelledby='deletingModal2'
+        aria-hidden='true'>
+        <div class='modal-dialog' role='document'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <h5 class='modal-title' id='deletingModal2'>Borrar Usuario</h5>
+                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+                        <span aria-hidden='true'>&times;</span>
+                    </button>
+                </div>
+                <div class='modal-body'>
+                    <h6 class="mt-1">Andres Armijos Villavicencio</h6>
+                    <p> Correo: andres.villavicencio@unl.edu.ec</p>
+                    <p> Fecha de Nacimiento: 1990/07/12</p>
+                    <p> Sexo: Hombre</p>
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-secondary' data-dismiss='modal'>Cerrar</button>
+                    <button type='button' class='btn btn-primary' data-dismiss='modal'>Borrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='modal fade' id='registroModal' tabindex='-1' role='dialog' aria-labelledby='registroModal'
+        aria-hidden='true'>
+        <div class='modal-dialog' role='document'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <h5 class='modal-title' id='registroModal'>Editar Usuario</h5>
+                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+                        <span aria-hidden='true'>&times;</span>
+                    </button>
+                </div>
+                <div class='modal-body'>
+                    <div class="input-group mb-3">
+                        <div class='form-group row'>
+                            <div class="col-sm-6">
+                                <input name="NombreR" id="NombreR" type="text" required class="form-control" minlength="5" maxlength="40" placeholder="Nombre">
+                            </div>
+                            <div class="col-sm-6">
+                                <input name="remitonumero" id="Apellido" type="text" required class="form-control" minlength="5" maxlength="40" placeholder="Apellido">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input name="correoR" id="correoR" type="text" required class="form-control" minlength="5" maxlength="40" placeholder="Correo electrónico">
+                    </div>
+                    <div class="form-group">
+                        <input name="contraseñaR" id="contraseñaR" type="password" required class="form-control" minlength="6" maxlength="20" required pattern="[A-Za-z0-9]+" 
+                        title="Mínimo 6 caractéres, obligatorio usar Mayúsculas, Minúsculas y Números" placeholder="Nueva Contraseña">
+                    </div>
+                    <div class="form-group">
+                        <input name="confirContraseñaR" id="confirContraseñaR" type="password" required class="form-control" minlength="6" maxlength="20" 
+                        required pattern="[A-Za-z0-9]+" title="¡RECUERDA! ingresa la misma contraseña DUUH" placeholder="Confirma Contraseña">
+                    </div>
+                    <div class="form-group">
+                        <input name="fechaR" id="fechaR" type="date" value="2020-12-02" min="1930-01-01" max="2020-12-03" 
+                        required class="form-control" >
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="genero" id="gMasculino" value="opción Hombre" checked>
+                        <label class="form-check-label" for="gMasculino">
+                            Hombre
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="genero" id="gFemenino" value="opción Mujer">
+                        <label class="form-check-label" for="gFemenino">
+                            Mujer
+                        </label>
+                    </div><br>
+                    <div class="form-group">
+                        <input name="urlR" id="urlR" type="url" required class="form-control" minlength="5" maxlength="40" placeholder="URL de la imagen de perfil">
+                    </div>
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-secondary' data-dismiss='modal'>Cerrar</button>
+                    <button type='button' class='btn btn-primary' data-dismiss='modal'>Editar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+<foot>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</foot>
+
+</html>

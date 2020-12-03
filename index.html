@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/bf76d6a5c6.js" crossorigin="anonymous"></script>
+    <title>Practica 6 bootstrap</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class=" collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="modal"
+                    data-target="#registroModal">Registrarse</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="modal"
+                        data-target="#loginModal">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="consultas.html">Administración de usuarios</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <div class='modal fade' id='loginModal' tabindex='-1' role='dialog' aria-labelledby='loginModal' aria-hidden='true'>
+        <div class='modal-dialog' role='document'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <h5 class='modal-title' id='loginModal'>LOGIN</h5>
+                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+                        <span aria-hidden='true'>&times;</span>
+                    </button>
+                </div>
+                <div class='modal-body'>
+                    <div class="input-group mb-3">
+                        <div class='form-group'>
+                            <label for='recipient-name' class='col-form-label'>Correo :</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Nombre de Usuario"
+                                    aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <label for='recipient-name' class='col-form-label'>Contraseña :</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Contraseña" aria-label="Password"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                    </div>
+                    <button type='button' class='btn btn-secondary' data-dismiss='modal'>Cerrar</button>
+                    <button type='button' class='btn btn-primary' data-dismiss='modal'>Login</button>
+                </div>
+                <div class='modal-footer'>
+                    <p>¿No tienes Cuenta? <a class="tooltip-test" title="linkRegistro" >Registrate Aquí</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='modal fade' id='registroModal' tabindex='-1' role='dialog' aria-labelledby='registroModal'
+        aria-hidden='true'>
+        <div class='modal-dialog' role='document'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <h5 class='modal-title' id='registroModal'>Registro Usuario</h5>
+                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+                        <span aria-hidden='true'>&times;</span>
+                    </button>
+                </div>
+                <div class='modal-body'>
+                    <div class="input-group mb-3">
+                        <div class='form-group row'>
+                            <div class="col-sm-6">
+                                <input name="NombreR" id="NombreR" type="text" required class="form-control" minlength="5" maxlength="40" placeholder="Nombre">
+                            </div>
+                            <div class="col-sm-6">
+                                <input name="remitonumero" id="Apellido" type="text" required class="form-control" minlength="5" maxlength="40" placeholder="Apellido">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input name="correoR" id="correoR" type="text" required class="form-control" minlength="5" maxlength="40" placeholder="Correo electrónico">
+                    </div>
+                    <div class="form-group">
+                        <input name="contraseñaR" id="contraseñaR" type="password" required class="form-control" minlength="6" maxlength="20" required pattern="[A-Za-z0-9]+" 
+                        title="Mínimo 6 caractéres, obligatorio usar Mayúsculas, Minúsculas y Números" placeholder="Contraseña">
+                    </div>
+                    <div class="form-group">
+                        <input name="confirContraseñaR" id="confirContraseñaR" type="password" required class="form-control" minlength="6" maxlength="20" 
+                        required pattern="[A-Za-z0-9]+" title="¡RECUERDA! ingresa la misma contraseña DUUH" placeholder="Confirma Contraseña">
+                    </div>
+                    <div class="form-group">
+                        <input name="fechaR" id="fechaR" type="date" value="2020-12-02" min="1930-01-01" max="2020-12-03" 
+                        required class="form-control" >
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="genero" id="gMasculino" value="opción Hombre" checked>
+                        <label class="form-check-label" for="gMasculino">
+                            Hombre
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="genero" id="gFemenino" value="opción Mujer">
+                        <label class="form-check-label" for="gFemenino">
+                            Mujer
+                        </label>
+                    </div><br>
+                    <div class="form-group">
+                        <input name="urlR" id="urlR" type="url" required class="form-control" minlength="5" maxlength="40" placeholder="URL de la imagen de perfil">
+                    </div>
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-secondary' data-dismiss='modal'>Cerrar</button>
+                    <button type='button' class='btn btn-primary' data-dismiss='modal'>Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </div><br><br><br><br>
+    <div class="text">
+        <h8>PRACTICA 6 BOOTSTRAP</h8>
+        <h9>Crear una interfaz web como práctica para registro de Usuarios</h9>
+    </div>  
+</body>
+<footer>
+</footer>
+</html>
